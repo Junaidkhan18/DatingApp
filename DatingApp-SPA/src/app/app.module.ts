@@ -9,7 +9,7 @@ import { from } from 'rxjs';
 import { AuthService } from './_services/auth.service';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-
+import { ErrorIntercepterProvider} from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -24,7 +24,8 @@ import { HomeComponent } from './home/home.component';
       FormsModule
    ],
    providers: [
-      AuthService
+      AuthService,
+      ErrorIntercepterProvider
    ],
    bootstrap: [
       AppComponent
