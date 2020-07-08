@@ -10,6 +10,9 @@ import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { DragableComponent } from './Dragable/Dragable.component';
+import { ChartsComponent } from './Charts/Charts.component';
+import { ReactiveComponent } from './Reactive/Reactive.component';
 
 
 export const appRoutes: Routes = [
@@ -25,6 +28,10 @@ export const appRoutes: Routes = [
                 canDeactivate: [PreventUnsavedChanges]},
                {path: 'messages', component: MessagesComponent},
                {path: 'lists', component: ListsComponent},
+               {path: 'Dragable', component: DragableComponent},
+               {path: 'Charts', component: ChartsComponent},
+               {path: 'Reactive', component: ReactiveComponent},
+
           ]
 
      },

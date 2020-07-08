@@ -3,7 +3,7 @@
     <h1>Find your match</h1>
     <p class="lead">Come on in to view your matches... All you need to do is sign up!</p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">Register</button>
       <button class="btn btn-info btn-lg">Learn more</button>
     </div>
   </div>
@@ -16,3 +16,11 @@
     </div>
   </div>
 </div>
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Do you want to confirm?</p>
+    <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
